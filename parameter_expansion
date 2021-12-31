@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+a="Hello World"
+echo $a
+#Hello World
+echo ${a}
+#Hello World
+greeting="Hello there!"
+echo $greeting
+#Hello there!
+echo ${greeting:6}
+#there!
+echo ${greeting:6:3}
+#the
+echo ${greeting/there/everybody}
+#hello everybody!
+echo ${greeting//e/_}
+#h_llo th_r_!
+echo ${greeting/e/_}
+#H_llo there!
+echo $greeting:4:3
+#Hello there!:4:3

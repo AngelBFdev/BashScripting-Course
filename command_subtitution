@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# uname -r
+#tell you the kernel
+echo "The kernel is $(uname -r)"
+#The kernel is [your kernel]
+echo "Result: $(python3 -c 'print("Hello from Python!")' | tr [a-z] [A-Z])"
+#Result: HELLO FROM PYTHON!

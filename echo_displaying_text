@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+echo hello world
+#hello world
+worldsize=big
+echo hello $worldsize world
+#hello big world
+echo "The kernel is $(uname -r)"
+#The kernel is [your kernel]
+echo The kernel is $(uname -r)
+#The kernel is [your kernel]
+#
+# echo The (kernel) is $(uname -r)
+#ERROR
+echo The \(kernel\) is $(uname -r)
+#The (kernel) is [your kernel]
+echo 'The kernel is $(uname -r)'
+#The kernel is $(uname -r)
+echo "The (kernel) is $(uname -r)"
+#The (kernel) is [your kernel]
+echo "The (kernel) is \$(uname -r)"
+#The (kernel) is $(uname -r)
+#
+#These statements have to be written in
+# the command line in order to work
+echo;
+echo; echo "More space!"; echo;
+echo -n "No newline";
+echo -n "Part of "; echo -n "a statement"
