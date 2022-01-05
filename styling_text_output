@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+echo -e "Name\t\tNumber"; echo -e "Scott\t\t123"
+#Build a table with that info
+echo -e "This text\nbreaks over\nthree lines"
+#\n is an enter key in the text
+echo -e "\a"
+#\a is an alert sound
+echo -e "Ding\a"
+#Ding plus alert sound
+echo -e "\033[33;44mColor Text\033[0m"
+#foreground;background. 
+#33 is yellow fg and 44 is blue bg
+# m ends the command secuence
+# use 0 at the end to reset the format
+echo -e "\033[91;100mColor Text\033[0m"
+#91 is bright red fg and 100 for gray bg
+echo -e "\033[4;31;40mERROR:\033[0m\033[31;40m Something went wrong.\033[0m"
+#4 is underlined, 31 is red fg, 40 is black bg
+#Part 2
+ulinered="\033[4;31;40m"
+red="\033[31;40m"
+none="\033[0m"
+echo -e $ulinered"ERROR:"$none
+echo -e $red"Something went wrong."$none

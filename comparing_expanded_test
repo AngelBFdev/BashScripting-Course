@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+[[ 4 -lt 3 ]];echo $?
+#1 or false
+[[ -d ~ && -a /bin/bash ]];echo $?
+#0 or true
+[[ -d ~ && -a /bin/mash ]];echo $?
+#1 or false
+[[ -d ~ || -a /bin/mash ]];echo $?
+#0 or true
+[[ -d ~ ]] && echo ~ is a directory
+# your home directory is a directory
+[[ -d /bin/bash ]] && echo ~ is a directory
+#Nothing happen since is not a directory
+ls && echo "listed the directory"
+# The list of your directory plus the echo statement
+true && echo "success!"
+#success!
+false && echo "success!"
+#Nothing
+[[ "cat" =~ c.* ]];echo $?
+#0 or true
+[[ "bat" =~ c.* ]];echo $?
+#1 or false

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#"help test" to see all the operators
+[ -d ~ ];echo $?
+#0 or true
+[ -d /bin/bash ];echo $?
+#1 or false
+[ -d /bin ];echo $?
+#0 or true
+[ "cat" = "dog" ];echo $?
+#1 or false
+[ "cat" = "cat" ];echo $?
+#0 or true
+[ 4 -lt 5 ];echo $?
+#0 or true
+[ 4 -lt 3 ];echo $?
+#1 or false
+[ ! 4 -lt 3 ];echo $?
+#0 or true

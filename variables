@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+mygreeting=hello
+mygreeting2="Good Morning"
+number=6
+# Now to print
+echo $mygreeting
+echo $mygreeting2
+echo $number
+#Part 2
+myvar="Hello!"
+echo "The value of the myvar viariable is: $myvar"
+myvar="Bonjour!"
+echo "The value of the myvar variable is: $myvar"
+#read only variable
+declare -r myname="Scott"
+echo "The value of the myname variable is: $myname"
+myname="Micheal"
+echo "The value of the myname variable is: $myname"
+#variable with only lowercase
+declare -l lowerstring="This is some TEXT!"
+echo "The value of the lowerstring variable is: $lowerstring"
+lowerstring="Let's CHANGE the VALUE!"
+echo "The value of the lowerstring variable is: $lowerstring"
+#variable with only uppercase
+declare -u upperstring="This is some TEXT!"
+echo "The value of the upperstring variable is: $upperstring"
+upperstring="Let's CHANGE the VALUE!"
+echo "The value of the upperstring variable is: $upperstring"
+# use env in the command line to see enviroment variables

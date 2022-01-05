@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+echo "The results are: $((2+2)) and $((3/1))"
+#The results are: 4 and 3
+printf "The results are: %d and %d\n" $((2 + 2)) $(( 3 / 1))
+#The results are: 4 and 3
+#PART 2
+echo "----10----| --5--"
+echo "Right-aligned text and digits"
+printf "%10s: %5d\n" "A label" 123 "B Label" 456
