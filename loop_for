@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+for i in 1 2 3
+do
+  echo -n "$i "
+done
+echo
+#The same but in just one line
+for i in 1 2 3; do echo -n "$i "; done
+echo
+#print 100 numbers
+for i in {1..100}
+do
+  echo -n "$i "
+done
+echo
+#print 100 numbers but in the C format
+for (( i=1; i<=100; i++))
+do
+  echo -n "$i "
+done
+echo
+#map an array
+declare -a fruits=("apple" "banana" "cherry")
+for i in ${fruits[@]}
+do
+  echo "Today's fruit is: $i"
+done
+#command substitution for
+for i in $(ls)
+do
+  echo "Found a file name: $i"
+done

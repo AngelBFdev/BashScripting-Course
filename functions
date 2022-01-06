@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+greet(){
+  echo "Hi there, $1. What a nice $2"
+}
+echo "And now, a greeting..."
+greet Scott Morning
+greet Everybody Evening
+#function to list all the arguments given
+numberthing(){
+  declare -i i=1
+  #$@ are all the arguments given
+  for f in $@; do
+    echo "$i:$f"
+    (( i+=1))
+  done
+  #$FUNCNAME gives you the name of the function
+  echo "This counting was brought to you by $FUNCNAME"
+}
+numberthing $(ls /)
+echo
+numberthing pine birch maple spruce
+#Local variables
+var1="I'm variable 1"
+myfunction(){
+  var2="I'm variable 2"
+  local var3="I'm variable 3"
+}
+myfunction
+echo $var1
+echo $var2
+echo $var3

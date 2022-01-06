@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+for i in {1..5}
+do
+  #This is overwritting the file
+  echo "This is line $i" > textfile.txt
+  #This is appending new content
+  #echo "This is line $i" >> textfile.txt
+done
+#How to read files
+while read f
+  do echo "I read a line and it says: $f"
+done < textfile.txt
