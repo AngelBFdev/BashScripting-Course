@@ -27,3 +27,4 @@ echo "The value of the upperstring variable is: $upperstring"
 upperstring="Let's CHANGE the VALUE!"
 echo "The value of the upperstring variable is: $upperstring"
 # use env in the command line to see enviroment variables
+#declare -p
