@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+part1(){
+  # -e is used to put text where the user types is stored
+  read -ep "Favorite color? " -i "Blue" favcolor
+  echo $favcolor
+}
+part2(){
+  if (($#<3)); then
+    echo "This command requires three arguments: "
+    echo "username, userid, and favorite number."
+  else
+    # the program goes here
+    echo "username: $1"
+    echo "userid: $2"
+    echo "favorite number: $3"
+  fi
+}
+# PART 2
+
+# PART 3
+part3(){
+  read -p "Favorite animal? " fav
+  while [[ -z $fav ]]
+  do
+    read -p "I need an answer! " fav
+  done
+  echo "$fav was selected"
+}
+
+part4(){
+  read -p "Favorite animal? [cat] " fav
+  while [[ -z $fav ]]
+  do
+    fav="cat"
+  done
+  echo "$fav was selected"
+}
+
+part5(){
+  read -p "What year? [nnnn] " year
+  # regular expresion to know if it's 4 digits
+  # regular expresion to know between 0-9
+  until [[ $year =~ [0-9]{4} ]]; do
+    read -p "A year, please! [nnnn] " year
+  done
+  echo "Selected year: $year"
+}
+
+echo "Which part of the script would you want to test?"
+select opt in "1" "2" "3" "4" "5" "quit"
+do
+  case $opt in
+    1) part1;;
+    2) part2 $@;;
+    3) part3;;
+    4) part4;;
+    5) part5;;
+    quit) break;;
+    *) echo "I'm not sure what that is"
+  esac
+done

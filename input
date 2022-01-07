@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+part1(){
+  echo "What is your name?"
+  read name
+  echo "What is your password"
+  # -s means silent and will make invisible your input
+  read -s pass
+  # -p is to store variables in the same line
+  read -p "What's your favorite animal " animal
+  echo "name: $name, pass: $pass, animal: $animal"
+  #help read to know more about read
+}
+part2(){
+  echo "Which animal"
+  select animal in "cat" "dog" "bird" "fish"
+  do
+    echo "You selected $animal!"
+    break
+  done
+}
+part3(){
+  echo "Which animal"
+  select animal in "cat" "dog" "quit"
+  do
+    case $animal in
+      cat) echo "Cats like to sleep.";;
+      dog) echo "Dogs like to play catch.";;
+      quit) break;;
+      *) echo "I'm not sure what that is";;
+    esac
+  done
+}
+echo "Which part of the script would you want to test?"
+select opt in "1" "2" "3" "quit"
+do
+  case $opt in
+    1) part1;;
+    2) part2;;
+    3) part3;;
+    quit) break;;
+    *) echo "I'm not sure what that is"
+  esac
+done
